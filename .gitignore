@@ -4,7 +4,5 @@ node_modules/
 npm-debug.log
 gulpfile.js
 config.json
-package-lock.json
-package.json
 yarn.lock
 CHANGELOG.md
