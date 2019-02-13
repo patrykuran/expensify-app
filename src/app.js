@@ -11,7 +11,8 @@ const renderDOM = function() {
             {app.subtitle && <h2>{app.subtitle}</h2>}
             <p>{(app.options && app.options.length > 0) ? "Here are your options" : "No options"}</p>
             <p>{app.options.length}</p>
-    
+
+            <button disabled={app.options.length === 0} onClick={onMakeDecision}>What should i do?</button>
             <button onClick={removeAll}>Remove All Options</button>
 
             <ol>
@@ -46,6 +47,13 @@ const onFormSubmit = (event) => {
 const removeAll = () => {
     app.options= [];
     renderDOM();
+}
+
+const onMakeDecision = () => {
+    const randomNumber = Math.floor(Math.random() * app.options.length);
+    const option = app.options[randomNumber];
+    alert(option)
+
 }
 
 const root = document.getElementById('root');

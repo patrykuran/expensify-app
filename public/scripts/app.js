@@ -32,6 +32,11 @@ var renderDOM = function renderDOM() {
         ),
         React.createElement(
             "button",
+            { disabled: app.options.length === 0, onClick: onMakeDecision },
+            "What should i do?"
+        ),
+        React.createElement(
+            "button",
             { onClick: removeAll },
             "Remove All Options"
         ),
@@ -75,6 +80,12 @@ var onFormSubmit = function onFormSubmit(event) {
 var removeAll = function removeAll() {
     app.options = [];
     renderDOM();
+};
+
+var onMakeDecision = function onMakeDecision() {
+    var randomNumber = Math.floor(Math.random() * app.options.length);
+    var option = app.options[randomNumber];
+    alert(option);
 };
 
 var root = document.getElementById('root');
