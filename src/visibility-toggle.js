@@ -14,7 +14,6 @@ class VisibilityToggle extends React.Component {
             }
         })
     }
-
     
     render() {
         return (
