@@ -1,0 +1,35 @@
+.widget {
+  background: lighten($color: $off-black, $amount: 10%);
+  margin-bottom: $m-size;
+}
+
+.widget__message {
+  text-align: center;
+  border-bottom: 1px solid $off-black;
+  margin: 0;
+  padding: $xl-size;
+}
+
+.widget__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget-header {
+  background: $off-black;
+  display: flex;
+  justify-content: space-between;
+  padding: $m-size;
+  color: $white-text;
+}
+
+.widget-header__title {
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (min-width: $desktop) {
+  .widget {
+    margin-bottom: $xl-size;
+  }
+}

@@ -1,0 +1,15 @@
+.options {
+    padding: 0;
+
+    .option {
+        display: flex;
+        justify-content: space-between;
+        padding: $l-size $m-size;
+        border-bottom: 1px solid $off-black; 
+    }
+
+    .option__text {
+        color: $white-text;
+        word-break: break-all;
+    }
+}
